@@ -613,7 +613,7 @@ const Checkout = () => {
             {t.checkout.title}
           </h1>
 
-          {items.length === 0 ? (
+          {items.length === 0 && kits.length === 0 ? (
             <div className="text-center py-12">
               <AlertCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <p className="text-lg text-muted-foreground mb-4">Votre panier est vide</p>

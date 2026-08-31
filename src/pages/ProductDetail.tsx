@@ -499,11 +499,12 @@ const ProductDetail = () => {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-semibold text-primary">
-                            {review.profiles?.first_name?.[0] || "U"}
+                            {review.reviewer_name?.[0] || "U"}
                           </div>
                           <div>
                             <p className="font-medium">
-                              {review.profiles?.first_name} {review.profiles?.last_name}
+                              {review.reviewer_name || "Client Scoly"}
+
                             </p>
                             <div className="flex">
                               {[1, 2, 3, 4, 5].map((star) => (

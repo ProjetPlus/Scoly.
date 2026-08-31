@@ -152,16 +152,27 @@ const WriteArticle = () => {
         } else if (data.cover_image) {
           mediaItems = [{ url: data.cover_image, type: "image" }];
         }
+        let premium = { fr: "", en: "", de: "", es: "" };
+        if (data.is_premium) {
+          const { data: pc } = await supabase.rpc("get_article_premium_content", { _article_id: data.id });
+          if (pc && pc.length > 0) {
+            premium = {
+              fr: pc[0].content_fr || "", en: pc[0].content_en || "",
+              de: pc[0].content_de || "", es: pc[0].content_es || "",
+            };
+          }
+        }
         setForm({
           title_fr: data.title_fr || "", title_en: data.title_en || "",
           title_de: data.title_de || "", title_es: data.title_es || "",
-          content_fr: data.content_fr || "", content_en: data.content_en || "",
-          content_de: data.content_de || "", content_es: data.content_es || "",
+          content_fr: data.content_fr || premium.fr, content_en: data.content_en || premium.en,
+          content_de: data.content_de || premium.de, content_es: data.content_es || premium.es,
           excerpt_fr: data.excerpt_fr || "", excerpt_en: data.excerpt_en || "",
           category: data.category || "general", is_premium: data.is_premium || false,
           price: String(data.price || 0), media: mediaItems,
           hashtags: [], meta_description: "",
         });
+
       }
     } catch (error) {
       console.error('Error fetching article:', error);

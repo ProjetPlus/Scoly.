@@ -42,12 +42,9 @@ interface Review {
   rating: number | null;
   comment: string | null;
   created_at: string | null;
-  user_id: string;
-  profiles?: {
-    first_name: string | null;
-    last_name: string | null;
-  } | null;
+  reviewer_name?: string | null;
 }
+
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -120,31 +117,16 @@ const ProductDetail = () => {
   };
 
   const fetchReviews = async () => {
-    const { data, error } = await supabase
-      .from("reviews")
-      .select("*")
-      .eq("product_id", id)
-      .order("created_at", { ascending: false });
+    if (!id) return;
+    const { data, error } = await supabase.rpc("get_product_reviews" as never, {
+      _product_id: id,
+    } as never);
 
     if (!error && data) {
-      // Fetch profiles separately to avoid the join issue
-      const reviewsWithProfiles: Review[] = await Promise.all(
-        data.map(async (review) => {
-          const { data: profile } = await supabase
-            .from("profiles")
-            .select("first_name, last_name")
-            .eq("id", review.user_id)
-            .single();
-          
-          return {
-            ...review,
-            profiles: profile || null,
-          };
-        })
-      );
-      setReviews(reviewsWithProfiles);
+      setReviews(data as unknown as Review[]);
     }
   };
+
 
   const handleAddToCart = () => {
     if (product) {
@@ -517,11 +499,12 @@ const ProductDetail = () => {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-semibold text-primary">
-                            {review.profiles?.first_name?.[0] || "U"}
+                            {review.reviewer_name?.[0] || "U"}
                           </div>
                           <div>
                             <p className="font-medium">
-                              {review.profiles?.first_name} {review.profiles?.last_name}
+                              {review.reviewer_name || "Client Scoly"}
+
                             </p>
                             <div className="flex">
                               {[1, 2, 3, 4, 5].map((star) => (

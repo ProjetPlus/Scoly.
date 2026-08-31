@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://scoly.ci/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/kits-scolaires</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/kits-scolaires" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/kits-scolaires" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/kits-scolaires" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/kits-scolaires" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/actualites</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/actualites" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/actualites" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/actualites" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/actualites" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/parrainage</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/parrainage" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/parrainage" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/parrainage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/parrainage" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/about</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/about" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/contact</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/contact" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/faq</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/faq" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/livraison-retours</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/livraison-retours" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/livraison-retours" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/livraison-retours" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/livraison-retours" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/mentions-legales</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/mentions-legales" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/terms</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/terms" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/privacy</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/privacy" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/cookies</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/cookies" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/cookies" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-bureautique</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-bureautique" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-bureautique" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-bureautique" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-bureautique" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-librairie</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-librairie" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-librairie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-librairie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-librairie" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-maternelle</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-maternelle" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-maternelle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-maternelle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-maternelle" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-primaire</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-primaire" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-primaire" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-primaire" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-primaire" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-secondaire</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-secondaire" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-secondaire" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-secondaire" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-secondaire" />
+  </url>
+  <url>
+    <loc>https://scoly.ci/shop?category=scoly-universite</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CI" href="https://scoly.ci/shop?category=scoly-universite" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scoly.ci/shop?category=scoly-universite" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scoly.ci/shop?category=scoly-universite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scoly.ci/shop?category=scoly-universite" />
+  </url>
+</urlset>

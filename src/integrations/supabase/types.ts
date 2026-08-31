@@ -3639,6 +3639,17 @@ export type Database = {
           source: string
         }[]
       }
+      get_product_reviews: {
+        Args: { _product_id: string }
+        Returns: {
+          comment: string
+          created_at: string
+          id: string
+          product_id: string
+          rating: number
+          reviewer_name: string
+        }[]
+      }
       get_provider_quota_status: {
         Args: never
         Returns: {

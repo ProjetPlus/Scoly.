@@ -613,7 +613,7 @@ const Checkout = () => {
             {t.checkout.title}
           </h1>
 
-          {items.length === 0 ? (
+          {items.length === 0 && kits.length === 0 ? (
             <div className="text-center py-12">
               <AlertCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <p className="text-lg text-muted-foreground mb-4">Votre panier est vide</p>
@@ -722,7 +722,26 @@ const Checkout = () => {
                           </div>
                         </div>
                       ))}
+                      {kits.map((kit) => (
+                        <div key={kit.kit_id} className="flex gap-4">
+                          <div className="w-16 h-16 bg-muted rounded-lg overflow-hidden flex-shrink-0">
+                            <img
+                              src={kit.image_url || "/placeholder.svg"}
+                              alt={kit.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="font-medium text-sm truncate">{kit.name}</p>
+                            <p className="text-sm text-muted-foreground">Kit · x{kit.quantity}</p>
+                            <p className="text-sm font-medium text-primary">
+                              {formatPrice(kit.price * kit.quantity)}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
+
 
                     {/* Coupon Code Input */}
                     <div className="border-t border-border pt-4 mb-4">

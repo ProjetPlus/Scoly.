@@ -24,7 +24,7 @@ type CheckoutStep = 'form' | 'payment' | 'success';
 
 const Checkout = () => {
   const { language, t } = useLanguage();
-  const { items, kits, total, clearCart } = useCart();
+  const { items, kits, total, clearCart, loading: cartLoading, refreshCart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -163,6 +163,10 @@ const Checkout = () => {
       loadProfile();
     }
   }, [user]);
+
+  useEffect(() => {
+    void refreshCart();
+  }, [refreshCart]);
 
   // Auto-apply loyalty coupon if available
   useEffect(() => {
@@ -613,7 +617,11 @@ const Checkout = () => {
             {t.checkout.title}
           </h1>
 
-          {items.length === 0 && kits.length === 0 ? (
+          {cartLoading ? (
+            <div className="flex items-center justify-center py-20 text-muted-foreground">
+              <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Chargement du panier…
+            </div>
+          ) : items.length === 0 && kits.length === 0 ? (
             <div className="text-center py-12">
               <AlertCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <p className="text-lg text-muted-foreground mb-4">Votre panier est vide</p>

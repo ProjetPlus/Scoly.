@@ -44,8 +44,8 @@ const Cart = () => {
           </nav>
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
             {t.nav.cart}
-            {items.length > 0 && (
-              <span className="ml-2 text-sm font-medium text-muted-foreground">({items.length} article{items.length > 1 ? "s" : ""})</span>
+            {items.length + kits.length > 0 && (
+              <span className="ml-2 text-sm font-medium text-muted-foreground">({items.length + kits.length} article{items.length + kits.length > 1 ? "s" : ""})</span>
             )}
           </h1>
 
@@ -286,7 +286,7 @@ const Cart = () => {
       </div>
 
       {/* Mobile sticky checkout bar */}
-      {items.length > 0 && (
+      {(items.length > 0 || kits.length > 0) && (
         <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur border-t border-border shadow-[0_-4px_16px_rgba(0,0,0,0.08)] px-3 py-2.5">
           {!meetsMinimum && (
             <p className="text-[11px] text-amber-700 dark:text-amber-300 mb-1.5 flex items-center gap-1">

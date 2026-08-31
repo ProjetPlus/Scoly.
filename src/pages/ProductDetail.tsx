@@ -42,12 +42,9 @@ interface Review {
   rating: number | null;
   comment: string | null;
   created_at: string | null;
-  user_id: string;
-  profiles?: {
-    first_name: string | null;
-    last_name: string | null;
-  } | null;
+  reviewer_name?: string | null;
 }
+
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();

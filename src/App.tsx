@@ -15,6 +15,7 @@ import { SessionSecurityProvider } from "@/components/SessionSecurityProvider";
 import RoleGuard from "@/components/RoleGuard";
 import { useAuth } from "@/contexts/AuthContext";
 import { ADMIN_ROLES, REFERENT_ROLES, TEAM_ROLES, getDashboardPathForRoles, hasPrivilegedRole, isPlatformAdmin, isReferent, isTeamMember } from "@/lib/rbac";
+import { Analytics } from "@vercel/analytics/react";
 
 // Critical path - eager load
 import Index from "./pages/Index";
@@ -166,6 +167,7 @@ const App = () => (
                     </Routes>
                   </Suspense>
                 </BrowserRouter>
+                <Analytics />
               </TooltipProvider>
             </CartProvider>
           </AuthProvider>

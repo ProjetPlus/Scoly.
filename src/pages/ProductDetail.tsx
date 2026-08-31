@@ -117,31 +117,16 @@ const ProductDetail = () => {
   };
 
   const fetchReviews = async () => {
-    const { data, error } = await supabase
-      .from("reviews")
-      .select("*")
-      .eq("product_id", id)
-      .order("created_at", { ascending: false });
+    if (!id) return;
+    const { data, error } = await supabase.rpc("get_product_reviews" as never, {
+      _product_id: id,
+    } as never);
 
     if (!error && data) {
-      // Fetch profiles separately to avoid the join issue
-      const reviewsWithProfiles: Review[] = await Promise.all(
-        data.map(async (review) => {
-          const { data: profile } = await supabase
-            .from("profiles")
-            .select("first_name, last_name")
-            .eq("id", review.user_id)
-            .single();
-          
-          return {
-            ...review,
-            profiles: profile || null,
-          };
-        })
-      );
-      setReviews(reviewsWithProfiles);
+      setReviews(data as unknown as Review[]);
     }
   };
+
 
   const handleAddToCart = () => {
     if (product) {

@@ -76,7 +76,7 @@ interface CartProviderProps {
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [items, setItems] = useState<CartItem[]>([]);
   const [kits, setKits] = useState<KitCartEntry[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { user } = useAuth();
   const { toast } = useToast();
 
@@ -189,31 +189,38 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     if (guestCart.length === 0) return;
     try {
       for (const item of guestCart) {
-        const { data: existing } = await supabase
+        const { data: existing, error: lookupError } = await supabase
           .from('cart_items')
           .select('id, quantity')
           .eq('user_id', user.id)
           .eq('product_id', item.product_id)
-          .single();
+          .maybeSingle();
+
+        if (lookupError) throw lookupError;
 
         if (existing) {
-          await supabase
+          const { error } = await supabase
             .from('cart_items')
             .update({ quantity: existing.quantity + item.quantity })
             .eq('id', existing.id);
+          if (error) throw error;
         } else {
-          await supabase
+          const { error } = await supabase
             .from('cart_items')
             .insert({
               user_id: user.id,
               product_id: item.product_id,
               quantity: item.quantity
             });
+          if (error) throw error;
         }
       }
       clearGuestCart();
     } catch (error) {
       console.error('Error migrating guest cart:', error);
+      // Never lose a cart when the network or an RLS rule temporarily fails.
+      await fetchGuestCartWithProducts();
+      throw error;
     }
   };
 
@@ -265,7 +272,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   useEffect(() => {
     setKits(loadKits());
     if (user) {
-      migrateGuestCartToUser().then(() => fetchCart());
+      migrateGuestCartToUser()
+        .then(() => fetchCart())
+        .catch(() => setLoading(false));
     } else {
       fetchCart();
     }
@@ -393,7 +402,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       clearCart,
       itemCount,
       total,
-      refreshCart: fetchCart,
+      refreshCart: async () => {
+        setKits(loadKits());
+        await fetchCart();
+      },
     }}>
       {children}
     </CartContext.Provider>

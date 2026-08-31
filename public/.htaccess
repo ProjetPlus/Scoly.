@@ -37,13 +37,8 @@
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   
-  # Cache pour les assets statiques (1 an)
-  <FilesMatch "\.(js|css|woff|woff2|svg|png|jpg|jpeg|gif|ico|webp)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
-  
-  # Cache plus court pour HTML (10 minutes)
-  <FilesMatch "\.html$">
+  # Toujours revalider la version déployée et ses ressources d'affichage.
+  <FilesMatch "\.(html|js|css|json|xml|woff|woff2|svg|png|jpg|jpeg|gif|ico|webp)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires "0"
